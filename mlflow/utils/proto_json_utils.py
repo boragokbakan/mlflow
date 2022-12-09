@@ -430,7 +430,7 @@ def parse_tf_serving_input(inp_dict, schema=None):
             items = inp_dict["inputs"]
             data = cast_schema_type(items)
     except Exception as e:
-        print(f"TFX DEBUG: {e})
+        print(f"TFX DEBUG: {e}")
         raise MlflowException(
             "Failed to parse data as TF serving input. Ensure that the input is"
             " a valid JSON-formatted string that conforms to the request body for"
